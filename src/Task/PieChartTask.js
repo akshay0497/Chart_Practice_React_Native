@@ -9,10 +9,10 @@ const PieChartTask = () => {
   const [loading, setLoading] = useState(false);
 
   const apiurl =
-    'https://b1.bhaaraterp.com/Api_data/pos/abc-analysis-pie-chart-graph/';
+    'url';
 
   const options = {
-    headers: {Token: '1f3b587d40a217cec89c8987cbe5e2084d27b89b'},
+    headers: {Token: 'token'},
     method: 'POST',
   };
 
