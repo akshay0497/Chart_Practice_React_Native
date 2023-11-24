@@ -29,11 +29,11 @@ export default function MoodTask() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
  
-  const apiurl = 'https://b1.bhaaraterp.com/dashboard_graph/leads-by-stage/';
+  const apiurl = 'url';
 
   useEffect(() => {
     fetch(apiurl, {
-      headers: {Token: '1f3b587d40a217cec89c8987cbe5e2084d27b89b'},
+      headers: {Token: 'token'},
       method: 'GET',
     })
       .then(response => response.json())
