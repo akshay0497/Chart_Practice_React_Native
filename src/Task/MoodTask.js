@@ -8,13 +8,13 @@ import {
   Dimensions
 } from 'react-native';
 import React, {useEffect, useState} from 'react';
-import axios from 'axios';
 import {LineChart} from 'react-native-chart-kit';
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import LoginApi from '../PracticeAPI/LoginApi';
 
 // icons
 const speed = (
@@ -148,7 +148,7 @@ export default function MoodTask() {
             justifyContent: 'space-between',
             padding: 5,
           }}>
-          <Text style={{fontSize: 20, color: 'white'}}>😇 Moodalytics </Text>
+          <Text style={{fontSize: 20, color: 'white'}}>😇 Moodalytics</Text>
           <Text style={{fontSize: 15}}>(Trend chart on Mood)</Text>
         </View>
       </View>
@@ -186,6 +186,11 @@ export default function MoodTask() {
         /> 
         )}
       </View>
+
+          <View>
+            <LoginApi/>
+          </View>
+
     </ScrollView>
   );
 }

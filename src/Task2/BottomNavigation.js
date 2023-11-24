@@ -13,6 +13,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Home from './Home';
 import MoodTask from '../Task/MoodTask';
 import FigmaUi from '../Task/FigmaUi';
+import PieChartTask from '../Task/PieChartTask';
 
 const Tab = createBottomTabNavigator();
 
@@ -78,6 +79,16 @@ const BottomNavigation = () => {
         component={MoodTask}
         options={{headerShown:false,
           tabBarLabel: 'Mood',
+          tabBarIcon: ({color, size}) => (
+            <MaterialIcons name="interpreter-mode" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="PieChartTask"
+        component={PieChartTask}
+        options={{headerShown:false,
+          tabBarLabel: 'PieChart',
           tabBarIcon: ({color, size}) => (
             <MaterialIcons name="interpreter-mode" color={color} size={size} />
           ),
